@@ -4,7 +4,7 @@
 
 @section('styles')
   <style>
-    .erorr-message {
+    .error-message {
       color: red;
       font-size: 0.8rem;
     }
