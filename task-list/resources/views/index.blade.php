@@ -3,7 +3,6 @@
 @section('title', 'The list of tasks')
 
 
-
 {{--@isset($name)--}}
 {{--    <div>The name is: {{$name}}</div>--}}
 {{--@endisset--}}
@@ -26,11 +25,11 @@
 
 
 @section('content')
-    @forelse($tasks as $task)
-        <div>
-            <a href="{{ route('tasks.show', ['id' => $task -> id ]) }}">{{ $task -> title }}</a>
-        </div>
-    @empty
-        <p>No tasks</p>
-    @endforelse
+  @forelse($tasks as $task)
+    <div>
+      <a href="{{ route('tasks.show', ['id' => $task -> id ]) }}">{{ $task -> title }}</a>
+    </div>
+  @empty
+    <p>No tasks</p>
+  @endforelse
 @endsection
