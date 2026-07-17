@@ -13,7 +13,7 @@ Route::get('/', function () {
 
 Route::get('/tasks/', function () {
   return view('index', [
-    'tasks' => Task::all(),
+    'tasks' => Task::latest()->get(),
   ]);
 })->name('tasks.index');
 
